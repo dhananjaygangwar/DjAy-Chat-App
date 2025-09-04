@@ -15,7 +15,7 @@ def handle_connect():
         username = f"User_{random.randint(1000,9999)}"
         gender = random.choice(["girl","boy"])
         # https://avatar.iran.liara.run/public/boy
-        #
+        #https://avatar.iran.liara.run/public/girl
 
 if __name__ == "__main__":
         socketio.run(app)
