@@ -23,5 +23,9 @@ def handle_connect():
 
         avatar_url = f"https://avatar.iran.liara.run/public/{gender}?username={username}"
 
+        users[request.sid] = { "username":username, "avatar":avatar_url}
+
+        emit("user_joined",{"username":username, "avatar": avatar_url}, broadcast = True) 
+
 if __name__ == "__main__":
         socketio.run(app)
