@@ -33,7 +33,7 @@ def handle_connect():
 def handle_disconnect():
         user = users.pop(request.sid, None)
         if user:
-            emit
+            emit("user_left", {"username":user["username"]},broadcast=True)
 
 
 if __name__ == "__main__":
