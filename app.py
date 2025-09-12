@@ -8,7 +8,6 @@ socketio = SocketIO(app)
 # dictionary. Store connected user. Key is socketid value is username and avatarurl.
 users = {}
 
-
 @app.route('/')
 def index():
         return render_template('index.html')
@@ -45,6 +44,12 @@ def handle_message(data):
                   "message":data["message"]
            }, broadcast= True)
 
+@socketio.on("update_username")
+def handle_update_username(data):
+       old_username = users[request.sid]["usename"]
+       new_username = data["username"]
+       users[request.sid]["username"] = new_username
+       
 
 if __name__ == "__main__":
         socketio.run(app)
