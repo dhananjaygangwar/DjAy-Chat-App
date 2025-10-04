@@ -3,23 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Djay chat app</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>DjAy chat app</title>
   </head>
   <body>
-    <h1>Djay chat app</h1>
+    <h1>DjAy chat app</h1>
 
     <div class="chat-container">
       <div class="chat-header">CHAT</div>
+      <!-- user div-->
       <div class="username-container">
         <span id="current-username"></span>
         <input type="text" id="username-input" placeholder="New username" />
-
-
+        <button id="update-username-button" >Update Username</button>
+      </div>
+      <!-- chat area -->
+      <div class="chat-messages" id="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="message-input" placeholder="Enter Message ..."/>
+        <button id="send-button">Send</button>
+         
 
       </div>
 
 
-      
     </div>
   </body>
 </html>
